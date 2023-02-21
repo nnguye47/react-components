@@ -1,13 +1,13 @@
 const GroceryListItem = (props) => {
 
-  const [isDone, setIsDone] = React.useState(false);
+  const [isDone, setIsDone] = React.useState('normal');
 
   const style = {
-    fontWeight: isDone ? 'bold' : 'normal',
+    fontWeight: isDone
   };
 
   return (
-    <li style={style} onMouseOver={() => setIsDone(!isDone)}>
+    <li style={style} onMouseOver={() => setIsDone('bold')}>
       {props.toBuy}
     </li>
   );
